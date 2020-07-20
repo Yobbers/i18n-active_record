@@ -52,7 +52,6 @@ module I18n
         self.table_name = 'translations'
 
         serialize :value
-        serialize :interpolations, Array
 
         class << self
           def locale(locale)
