@@ -77,15 +77,15 @@ module I18n
             Translation.locale(locale).all
           else
             Rails.cache.fetch("i18n-active-record-#{locale}-#{key}") do
-              mixed_result = Translation.locale(locale).lookup(key)
+              dirty_result = Translation.locale(locale).lookup(key)
 
-              if mixed_resource.respond_to?(:to_a)
-                mixed_result.to_a
-              elsif mixed_result.is_a?(Array)
-                mixed_result
-              elsif mixed_result.is_a?(String)
-                mixed_result
-              elsif mixed_result.is_a?(NilClass)
+              if dirty_result.respond_to?(:to_a)
+                dirty_result.to_a
+              elsif dirty_result.is_a?(Array)
+                dirty_result
+              elsif dirty_result.is_a?(String)
+                dirty_result
+              elsif dirty_result.is_a?(NilClass)
                 []
               else
                 []
