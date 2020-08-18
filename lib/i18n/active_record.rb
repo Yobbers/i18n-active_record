@@ -1,1 +1,1 @@
-require 'rails'
+require 'i18n'
