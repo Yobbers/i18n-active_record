@@ -4,7 +4,6 @@ require 'i18n/backend/active_record/translation'
 module I18n
   module Backend
     class ActiveRecord
-      autoload :Missing,       'i18n/backend/active_record/missing'
       autoload :StoreProcs,    'i18n/backend/active_record/store_procs'
       autoload :Translation,   'i18n/backend/active_record/translation'
       autoload :Configuration, 'i18n/backend/active_record/configuration'
